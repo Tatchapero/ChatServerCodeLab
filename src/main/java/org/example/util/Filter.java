@@ -93,7 +93,7 @@ public class Filter {
 
     public static String message(String message) {
         for (String bannedWord : bannedWords) {
-            message = message.replace(bannedWord, filteredWord(bannedWord));
+            message = message.replaceAll("(?i)" + bannedWord, filteredWord(bannedWord));
         }
 
         return message;
@@ -113,7 +113,7 @@ public class Filter {
 
     public static boolean hasBannedWord(String message) {
         for (String bannedWord : bannedWords) {
-            if (message.contains(bannedWord))
+            if (message.toLowerCase().contains(bannedWord))
                 return true;
         }
 

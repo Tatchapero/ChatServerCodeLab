@@ -3,6 +3,6 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         ChatServer server = ChatServer.getInstance();
-        server.startServer(8080);
+        server.startServer(12345);
     }
 }
